@@ -6,56 +6,56 @@ set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=50
 set ruler         " show the cursor position all the time
-augroup vimrcEx
-	" Clear all autocmds in the group
-	autocmd!
-	autocmd FileType text setlocal textwidth=78
-	" Jump to last cursor position unless it's invalid or in an event handler
-	autocmd BufReadPost *
-				\ if line("'\"") > 0 && line("'\"") <= line("$") |
-				\   exe "normal g`\"" |
-				\ endif
-
-	"for ruby, autoindent with two spaces, always expand tabs
-	autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
-	autocmd FileType python set sw=4 sts=4 et
-
-	autocmd! BufRead,BufNewFile *.sass setfiletype sass 
-
-	autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
-	autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
-
-	" Indent p tags
-	" autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
-
-	" Don't syntax highlight markdown because it's often wrong
-	autocmd! FileType mkd setlocal syn=off
-
-	" Leave the return key alone when in command line windows, since it's used
-	" to run commands there.
-	autocmd! CmdwinEnter * :unmap <cr>
-	autocmd! CmdwinLeave * :call MapCR()
-augroup END
-
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
 set backspace=indent,eol,start
 set hlsearch
 
+augroup vimrcEx
+  " Clear all autocmds in the group
+  autocmd!
+  autocmd FileType text setlocal textwidth=78
+  " Jump to last cursor position unless it's invalid or in an event handler
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
+
+  "for ruby, autoindent with two spaces, always expand tabs
+  autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+  autocmd FileType python set sw=4 sts=4 et
+
+  autocmd! BufRead,BufNewFile *.sass setfiletype sass 
+
+  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
+  autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+
+  " Indent p tags
+  " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+
+  " Don't syntax highlight markdown because it's often wrong
+  autocmd! FileType mkd setlocal syn=off
+
+  " Leave the return key alone when in command line windows, since it's used
+  " to run commands there.
+  autocmd! CmdwinEnter * :unmap <cr>
+  autocmd! CmdwinLeave * :call MapCR()
+augroup END
+
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-	syntax on
+  syntax on
 endif
 
 "clear the search buffer when hitting return or esc
 augroup no_highlight
-	autocmd TermResponse * nnoremap <esc> :noh<return><esc>
+  autocmd TermResponse * nnoremap <esc> :noh<return><esc>
 augroup END
 
 if filereadable(expand("~/.vimrc.bundles"))
-	source ~/.vimrc.bundles
+  source ~/.vimrc.bundles
 endif
 
 filetype plugin indent on " Enable filetype-specific indenting and plugins
@@ -65,56 +65,104 @@ filetype plugin indent on " Enable filetype-specific indenting and plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 augroup vimrcEx
-	" Clear all autocmds in the group
-	autocmd!
-	autocmd FileType text setlocal textwidth=78
-	" Jump to last cursor position unless it's invalid or in an event handler
-	autocmd BufReadPost *
-				\ if line("'\"") > 0 && line("'\"") <= line("$") |
-				\   exe "normal g`\"" |
-				\ endif
+  " Clear all autocmds in the group
+  autocmd!
+  autocmd FileType text setlocal textwidth=78
+  " Jump to last cursor position unless it's invalid or in an event handler
+  autocmd BufReadPost *
+        \ if line("'\"") > 0 && line("'\"") <= line("$") |
+        \   exe "normal g`\"" |
+        \ endif
 
-	"for ruby, autoindent with two spaces, always expand tabs
-	autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
-	autocmd FileType python set sw=4 sts=4 et
+  "for ruby, autoindent with two spaces, always expand tabs
+  autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+  autocmd FileType python set sw=4 sts=4 et
 
-	autocmd! BufRead,BufNewFile *.sass setfiletype sass 
+  autocmd! BufRead,BufNewFile *.sass setfiletype sass 
 
-	autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
-	autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+  autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
+  autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
 
-	" Indent p tags
-	" autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
+  " Indent p tags
+  " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 
-	" Don't syntax highlight markdown because it's often wrong
-	autocmd! FileType mkd setlocal syn=off
+  " Don't syntax highlight markdown because it's often wrong
+  autocmd! FileType mkd setlocal syn=off
 
-	" Leave the return key alone when in command line windows, since it's used
-	" to run commands there.
-	autocmd! CmdwinEnter * :unmap <cr>
-	autocmd! CmdwinLeave * :call MapCR()
+  " Leave the return key alone when in command line windows, since it's used
+  " to run commands there.
+  autocmd! CmdwinEnter * :unmap <cr>
+  autocmd! CmdwinLeave * :call MapCR()
 augroup END
 
+" Softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+if executable('ag')
+  " Use Ag over Grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 
+" Numbers
+set number
+set numberwidth=5
+
 " Local config
 if filereadable($HOME . "/.vimrc.local")
-	source ~/.vimrc.local
+  source ~/.vimrc.local
 endif
 
 "Rename Current File
 function! RenmaeFile()
-	let old_name = expand('%')
-	let new_name = input('New file name: ', expand('%'), 'file')
-	if new_name != '' && new_name != old_name
-		exec ':saveas ' . new_name
-		exec ':silent !rm ' . old_name
-		redraw!
-	endif
+  let old_name = expand('%')
+  let new_name = input('New file name: ', expand('%'), 'file')
+  if new_name != '' && new_name != old_name
+    exec ':saveas ' . new_name
+    exec ':silent !rm ' . old_name
+    redraw!
+  endif
 endfunction
 map <leader>n :call RenameFile()<cr>
+
+
+" Tab completion
+" " will insert tab at beginning of line, will use completion if not at beginning
+set wildmode=list:longest,list:full
+set complete=.,w,t
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
+
+" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
+let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+
+" " Index ctags from any project, including those outside Rails
+map <Leader>ct :!ctags -R .<CR>
+
+" Switch between the last two files
+nnoremap <leader><leader> <c-^>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
+
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
@@ -126,47 +174,54 @@ map <leader>c :w\|:silent !script/features<cr>
 map <leader>w :w\|:silent !script/features --profile wip<cr>
 
 function! RunTestFile(...)
-	if a:0
-		let command_suffix = a:1
-	else
-		let command_suffix = ""
-	endif
+  if a:0
+    let command_suffix = a:1
+  else
+    let command_suffix = ""
+  endif
 
-	" Run the tests for the previously-marked file.
-	let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
-	if in_test_file
-		call SetTestFile()
-	elseif !exists("t:grb_test_file")
-		return
-	end
-	call RunTests(t:grb_test_file . command_suffix)
+  " Run the tests for the previously-marked file.
+  let in_test_file = match(expand("%"), '\(.feature\|_spec.rb\)$') != -1
+  if in_test_file
+    call SetTestFile()
+  elseif !exists("t:grb_test_file")
+    return
+  end
+  call RunTests(t:grb_test_file . command_suffix)
 endfunction
 
 function! RunNearestTest()
-	let spec_line_number = line('.')
-	call RunTestFile(":" . spec_line_number)
+  let spec_line_number = line('.')
+  call RunTestFile(":" . spec_line_number)
 endfunction
 
 function! SetTestFile()
-	" Set the spec file that tests will be run for.
-	let t:grb_test_file=@%
+  " Set the spec file that tests will be run for.
+  let t:grb_test_file=@%
 endfunction
 
 function! RunTests(filename)
-	" Write the file and run tests for the given filename
-	:w
-	if match(a:filename, '\.feature$') != -1
-		exec ":!script/features " . a:filename
-	else
-		if filereadable("script/test")
-			exec ":!script/test " . a:filename
-		elseif filereadable("Gemfile")
-			exec ":!bundle exec rspec --color " . a:filename
-		else
-			exec ":!rspec --color " . a:filename
-		end
-	end
+  " Write the file and run tests for the given filename
+  :w
+  if match(a:filename, '\.feature$') != -1
+    exec ":!script/features " . a:filename
+  else
+    if filereadable("script/test")
+      exec ":!script/test " . a:filename
+    elseif filereadable("Gemfile")
+      exec ":!bundle exec rspec --color " . a:filename
+    else
+      exec ":!rspec --color " . a:filename
+    end
+  end
 endfunction
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" COLOR
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:set t_Co=256 " 256 colors
+:set background=dark
+:color solorized
 
 """""""""""""""""""
 "Random Key Mappings
