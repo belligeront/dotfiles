@@ -219,9 +219,9 @@ endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLOR
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-:set t_Co=256 " 256 colors
-:set background=dark
-:color solorized
+set background=dark
+colorscheme solarized
+
 
 """""""""""""""""""
 "Random Key Mappings
