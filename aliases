@@ -34,5 +34,8 @@ alias rk="rake"
 alias s="rspec"
 alias z="zeus"
 
+# Custom
+alias dot="cd ~/Dropbox/dotfiles/dotfiles"
+
 # Include custom aliases
 [[ -f .aliases.local ]] && source ~/.aliases.local
