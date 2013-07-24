@@ -36,6 +36,7 @@ alias z="zeus"
 
 # Custom
 alias dot="cd ~/Dropbox/dotfiles/dotfiles"
+alias code="cd ~/Dropbox/code"
 
 # Include custom aliases
 [[ -f .aliases.local ]] && source ~/.aliases.local
