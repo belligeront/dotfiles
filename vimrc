@@ -4,7 +4,8 @@ set shell=/bin/bash
 set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
 set nowritebackup
-set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+" http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
+set noswapfile    
 set modelines=0
 set history=50
 set ruler         " show the cursor position all the time
@@ -14,6 +15,21 @@ set laststatus=2  " Always display the status line
 set backspace=indent,eol,start
 set hlsearch
 set undofile
+set scrolloff=3
+set visualbell "turn off beeps
+set cursorline
+set colorcolumn=85
+set wildmenu
+set wildmode=list:full
+
+" Save on losing focus
+au FocusLost * :wa
+
+
+"search for lowercase string will be case-insensitive
+"if one or more characters is uppercase the search will be case-sensitive
+set ignorecase
+set smartcase
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -54,9 +70,6 @@ augroup vimrcEx
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
-
-  " Indent p tags
-  " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
 
   " Don't syntax highlight markdown because it's often wrong
   autocmd! FileType mkd setlocal syn=off
@@ -121,6 +134,12 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
+" Remove trailing whitespace on save for ruby files.
+au BufWritePre *.rb :%s/\s\+$//e
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
+
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
@@ -180,6 +199,10 @@ map <Leader>vv :RVview<cr>
 map <Leader>vc :RVcontroller<cr>
 map <Leader>vf :RVfunctional<cr>
 nnoremap <leader>w :w!<cr>
+
+" use Tab for [bracket-matching] in normal and visual modes 
+nnoremap <tab> %
+vnoremap <tab> %
 
 imap <C-j> (
 imap <C-k> )

@@ -17,6 +17,9 @@ alias v="$VISUAL"
 
 # git
 alias gci="git pull --rebase && rake && git push"
+alias gad='git add .'
+alias gd='git diff'
+alias gp='git push'
 
 # Bundler
 alias b="bundle"
@@ -36,12 +39,15 @@ alias rk="rake"
 alias s="rspec"
 alias z="zeus"
 
-# Custom
+# Ruby
+alias irb='irb --readline -r irb/completion'
+
+# Filepaths
 alias aliases='vim ~/Dropbox/dotfiles/aliases'
 alias dot="cd ~/Dropbox/dotfiles"
+alias drop="cd ~/Dropbox"
 alias code="cd ~/code"
 alias vimrc="vim ~/Dropbox/dotfiles/vimrc"
-
 
 # Include custom aliases
 [[ -f .aliases.local ]] && source ~/.aliases.local
