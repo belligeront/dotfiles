@@ -8,3 +8,5 @@ tags
 tmp/**/*
 !tmp/cache/.keep
 zeus.json
+config.yml
+*.un~

@@ -3,8 +3,9 @@ alias tlf="tail -f"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
 alias ...='../..'
+alias ....='../../..'
 alias l='ls'
-alias ll='ls -al'
+lias ll='ls -al'
 alias lh='ls -Alh'
 alias -g G='| grep'
 alias -g M='| less'
@@ -37,6 +38,8 @@ alias z="zeus"
 # Custom
 alias dot="cd ~/Dropbox/dotfiles/dotfiles"
 alias code="cd ~/Dropbox/code"
+alias vimrc="vim ~/Dropbox/dotfiles/dotfiles/vimrc"
+
 
 # Include custom aliases
 [[ -f .aliases.local ]] && source ~/.aliases.local
