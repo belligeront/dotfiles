@@ -11,6 +11,7 @@ alias -g G='| grep'
 alias -g M='| less'
 alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
+alias c='cd'
 alias e="$EDITOR"
 alias v="$VISUAL"
 
@@ -36,8 +37,9 @@ alias s="rspec"
 alias z="zeus"
 
 # Custom
+alias aliases='vim ~/Dropbox/dotfiles/dotfiles/aliases'
 alias dot="cd ~/Dropbox/dotfiles/dotfiles"
-alias code="cd ~/Dropbox/code"
+alias code="cd ~/code"
 alias vimrc="vim ~/Dropbox/dotfiles/dotfiles/vimrc"
 
 
