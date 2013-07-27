@@ -37,10 +37,10 @@ alias s="rspec"
 alias z="zeus"
 
 # Custom
-alias aliases='vim ~/Dropbox/dotfiles/dotfiles/aliases'
-alias dot="cd ~/Dropbox/dotfiles/dotfiles"
+alias aliases='vim ~/Dropbox/dotfiles/aliases'
+alias dot="cd ~/Dropbox/dotfiles"
 alias code="cd ~/code"
-alias vimrc="vim ~/Dropbox/dotfiles/dotfiles/vimrc"
+alias vimrc="vim ~/Dropbox/dotfiles/vimrc"
 
 
 # Include custom aliases
