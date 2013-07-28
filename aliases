@@ -5,7 +5,7 @@ alias mkdir='mkdir -p'
 alias ...='../..'
 alias ....='../../..'
 alias l='ls'
-lias ll='ls -al'
+alias ll='ls -al'
 alias lh='ls -Alh'
 alias -g G='| grep'
 alias -g M='| less'
@@ -48,6 +48,8 @@ alias dot="cd ~/Dropbox/dotfiles"
 alias drop="cd ~/Dropbox"
 alias code="cd ~/code"
 alias vimrc="vim ~/Dropbox/dotfiles/vimrc"
+alias notes="vim ~/Dropbox/notes/programing_notes.txt"
+alias tools="vim ~/Dropbox/notes/sharpen_tools.txt"
 
 # Include custom aliases
 [[ -f .aliases.local ]] && source ~/.aliases.local

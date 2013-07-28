@@ -192,13 +192,17 @@ map <Leader>pn :sp ~/Dropbox/notes/programing_notes.txt<cr>
 map <Leader>ra :%s/
 map <Leader>sp yss<p>
 map <Leader>st :sp ~/Dropbox/notes/sharpen_tools.txt<cr>
-map <Leader>vi :tabe ~/Dropbox/dotfiles/dotfiles/vimrc<CR>
+map <Leader>vi :tabe ~/Dropbox/dotfiles/vimrc<CR>
 map <Leader>vu :RVunittest<CR>
 map <Leader>vm :RVmodel<cr>
 map <Leader>vv :RVview<cr>
 map <Leader>vc :RVcontroller<cr>
 map <Leader>vf :RVfunctional<cr>
 nnoremap <leader>w :w!<cr>
+
+" Run current file in ruby
+imap <Leader>rr <ESC>:!ruby %<CR>
+nmap <Leader>rr :!ruby %<CR>
 
 " use Tab for [bracket-matching] in normal and visual modes 
 nnoremap <tab> %
@@ -211,3 +215,4 @@ command! Q q " Bind :Q to :q
 command! WQ wq
 command! Wq wq
 command! W w
+command! Vsp vsp
