@@ -40,7 +40,7 @@ alias s="rspec"
 alias z="zeus"
 
 # Ruby
-alias irb='irb --readline -r irb/completion'
+#alias irb='irb --readline -r irb/completion'
 
 # Filepaths
 alias aliases='vim ~/Dropbox/dotfiles/aliases'
@@ -50,6 +50,10 @@ alias code="cd ~/code"
 alias vimrc="vim ~/Dropbox/dotfiles/vimrc"
 alias notes="vim ~/Dropbox/notes/programing_notes.txt"
 alias tools="vim ~/Dropbox/notes/sharpen_tools.txt"
+alias forecast="~/code/forecast/bin/forecast"
+
+#Typos
+alias zhs='zsh'
 
 # Include custom aliases
 [[ -f .aliases.local ]] && source ~/.aliases.local

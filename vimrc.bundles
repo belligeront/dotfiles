@@ -30,6 +30,7 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+Bundle "godlygeek/tabular"
     
 
 "Commenting out snipmate for now 
