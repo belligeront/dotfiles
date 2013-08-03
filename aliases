@@ -37,7 +37,16 @@ alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias m="migrate"
 alias rk="rake"
 alias s="rspec"
+
+# zeus 
 alias z="zeus"
+alias zs="zeus start"
+alias zi="zeus init"
+alias zc="zeus console"
+alias zs="zeus server"
+alias zr="zeus rake"
+alias zg="zeus generate"
+alias zt="zeus rspec spec/"
 
 # Postgres
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
