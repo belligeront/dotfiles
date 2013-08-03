@@ -61,6 +61,8 @@ alias vimrc="vim ~/Dropbox/dotfiles/vimrc"
 alias notes="vim ~/Dropbox/notes/programing_notes.txt"
 alias tools="vim ~/Dropbox/notes/sharpen_tools.txt"
 alias forecast="~/code/forecast/bin/forecast"
+alias snip="~/Dropbox/dotfiles/vim/snippets"
+alias snippets="~/Dropbox/dotfiles/vim/snippets"
 
 #Typos
 alias zhs='zsh'
