@@ -2,6 +2,7 @@
 *.sw[nop]
 .bundle
 db/*.sqlite3
+db/*.sqlite3-journal
 log/*.log
 rerun.txt
 tags
@@ -10,3 +11,7 @@ tmp/**/*
 zeus.json
 config.yml
 *.un~
+database.yml
+.idea
+.secret
+.project
