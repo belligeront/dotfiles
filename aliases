@@ -17,9 +17,10 @@ alias v="$VISUAL"
 
 # git
 alias gci="git pull --rebase && rake && git push"
-alias gad='git add .'
+alias gad='git add -A'
 alias gd='git diff'
 alias gp='git push'
+alias gs='git status'
 
 # Bundler
 alias b="bundle"
