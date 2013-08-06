@@ -98,6 +98,12 @@ endif
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
 
+" Set UltiSnips to use vim-snippets
+set runtimepath+=~/.vim/bundle/vim-snippets
+set runtimepath+=~/.vim/snippets
+let g:UltiSnipsSnippetsDir=["bundle/vim-snippets", "snippets"]
+
+
 " Numbers
 set number
 set numberwidth=5
@@ -216,3 +222,4 @@ command! WQ wq
 command! Wq wq
 command! W w
 command! Vsp vsp
+command! Sp sp

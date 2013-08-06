@@ -29,12 +29,8 @@ Bundle 'tpope/vim-markdown'
 Bundle 'nelstrom/vim-visual-star-search'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+Bundle "SirVer/ultisnips"
 Bundle "godlygeek/tabular"
-    
-
-"Commenting out snipmate for now 
-"Bundle "garbas/vim-snipmate"
-"Bundle "honza/vim-snippets"
+Bundle "honza/vim-snippets"
 
 filetype on
