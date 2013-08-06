@@ -99,9 +99,8 @@ endif
 let g:syntastic_check_on_open=1
 
 " Set UltiSnips to use vim-snippets
-set runtimepath+=~/.vim/bundle/vim-snippets
-set runtimepath+=~/.vim/snippets
-let g:UltiSnipsSnippetsDir=["bundle/vim-snippets", "snippets"]
+let g:UltiSnipsSnippetsDir=["bundle/vim-snippets/snippets", "snippets"]
+let g:always_use_first_snippet=1 "use first
 
 
 " Numbers
