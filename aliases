@@ -48,6 +48,7 @@ alias zs="zeus server"
 alias zr="zeus rake"
 alias zg="zeus generate"
 alias zt="zeus rspec spec/"
+alias zk="zeus cucumber"
 
 # Postgres
 alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
@@ -62,8 +63,8 @@ alias vimrc="vim ~/Dropbox/dotfiles/vimrc"
 alias notes="vim ~/Dropbox/notes/programing_notes.txt"
 alias tools="vim ~/Dropbox/notes/sharpen_tools.txt"
 alias forecast="~/code/forecast/bin/forecast"
-alias snip="~/Dropbox/dotfiles/vim/snippets"
-alias snippets="~/Dropbox/dotfiles/vim/snippets"
+alias snip="~/Dropbox/dotfiles/vim/bundle/ultisnips/UltiSnips"
+alias snippets="~/Dropbox/dotfiles/vim/bundle/ultisnips/UltiSnips"
 
 #Typos
 alias zhs='zsh'

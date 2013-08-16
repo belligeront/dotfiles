@@ -99,7 +99,7 @@ endif
 let g:syntastic_check_on_open=1
 
 " Set UltiSnips to use vim-snippets
-let g:UltiSnipsSnippetsDir=["bundle/vim-snippets/snippets", "snippets"]
+let g:UltiSnipsSnippetsDir=["bundle/vim-snippets/snippets"]
 let g:always_use_first_snippet=1 "use first
 
 
@@ -164,8 +164,9 @@ set splitright
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>t :VroomRunTestFile<cr>
-map <leader>T :VroomRunNearestTest<cr>
+map <leader>t :w\|:VroomRunTestFile<cr>
+map <leader>T :w\|:VroomRunNearestTest<cr>
+map <Leader>rr :w\|:!rspec --color %<cr>
 let g:vroom_map_keys = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -193,6 +194,8 @@ nnoremap <c-l> <c-w>l
 map <Leader>bb :!bundle install<cr>
 map <Leader>co :Tabularize /\|
 map <Leader>i mmgg=G`m<CR>
+map <Leader>h noh<CR>
+map <Leader>m :Rmodel
 map <Leader>pn :sp ~/Dropbox/notes/programing_notes.txt<cr>
 map <Leader>ra :%s/
 map <Leader>sp yss<p>
@@ -203,15 +206,15 @@ map <Leader>vm :RVmodel<cr>
 map <Leader>vv :RVview<cr>
 map <Leader>vc :RVcontroller<cr>
 map <Leader>vf :RVfunctional<cr>
+
 nnoremap <leader>w :w!<cr>
+
+" Yank selected text to clipboard
+vnoremap <C-c> "*y
 
 " Run current file in ruby
 imap <Leader>rr <ESC>:!ruby %<CR>
 nmap <Leader>rr :!ruby %<CR>
-
-" use Tab for [bracket-matching] in normal and visual modes 
-nnoremap <tab> %
-vnoremap <tab> %
 
 imap <C-j> (
 imap <C-k> )
@@ -222,3 +225,4 @@ command! Wq wq
 command! W w
 command! Vsp vsp
 command! Sp sp
+command! Xa xa
