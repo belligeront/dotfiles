@@ -124,6 +124,19 @@ function! RenmaeFile()
 endfunction
 map <leader>n :call RenameFile()<cr>
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PROMOTE VARIABLE TO RSPEC LET
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
+:map <leader>l :PromoteToLet<cr>
+
 
 " Tab completion
 " " will insert tab at beginning of line, will use completion if not at beginning
@@ -167,6 +180,7 @@ set splitright
 map <leader>t :w\|:VroomRunTestFile<cr>
 map <leader>T :w\|:VroomRunNearestTest<cr>
 map <Leader>rr :w\|:!rspec --color %<cr>
+imap <Leader>rr <ESC> :w\|:!rspec --color %<cr>
 let g:vroom_map_keys = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -211,10 +225,12 @@ nnoremap <leader>w :w!<cr>
 
 " Yank selected text to clipboard
 vnoremap <C-c> "*y
+"Yank entire file
+map <Leader>ca ggVG"*y
 
-" Run current file in ruby
-imap <Leader>rr <ESC>:!ruby %<CR>
-nmap <Leader>rr :!ruby %<CR>
+"Paste clipcoard
+map <Leader>vv "*p
+
 
 imap <C-j> (
 imap <C-k> )
