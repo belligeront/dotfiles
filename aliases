@@ -24,6 +24,7 @@ alias gs='git status'
 
 # Bundler
 alias b="bundle"
+alias rake="noglob bundled_rake"
 
 # Tests and Specs
 alias t="ruby -I test"
@@ -68,6 +69,9 @@ alias snippets="~/Dropbox/dotfiles/vim/bundle/ultisnips/UltiSnips"
 
 #Typos
 alias zhs='zsh'
+alias vi='vim'
+alias rsepc='rspec'
+
 
 # Include custom aliases
 [[ -f .aliases.local ]] && source ~/.aliases.local
