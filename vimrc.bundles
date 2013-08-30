@@ -32,5 +32,6 @@ Bundle "tomtom/tlib_vim"
 Bundle "SirVer/ultisnips"
 Bundle "godlygeek/tabular"
 Bundle "honza/vim-snippets"
+Bundle 'christoomey/vim-tmux-navigator'
 
 filetype on
