@@ -205,11 +205,17 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-map <Leader>bb :!bundle install<cr>
+map <Leader>bb :!bundle install<CR>
 map <Leader>co :Tabularize /\|
+map <Leader>gc :Gcommit<CR>
+map <Leader>gd :Gdiff<CR>
+map <Leader>gi :Git
+map <Leader>gs :Gstatus<CR>
+map <Leader>grm :Gremove
+
 map <Leader>i mmgg=G`m<CR>
 map <Leader>h noh<CR>
-map <Leader>m :Rmodel
+map <Leader>m :Rmodel<CR>
 map <Leader>pn :sp ~/Dropbox/notes/programing_notes.txt<cr>
 map <Leader>ra :%s/
 map <Leader>sp yss<p>
