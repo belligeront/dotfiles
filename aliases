@@ -42,7 +42,7 @@ alias s="rspec"
 
 # zeus 
 alias z="zeus"
-alias zs="zeus start"
+alias zst="zeus start"
 alias zi="zeus init"
 alias zc="zeus console"
 alias zs="zeus server"
