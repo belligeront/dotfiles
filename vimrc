@@ -80,6 +80,10 @@ augroup vimrcEx
   autocmd! CmdwinLeave * :call MapCR()
 augroup END
 
+augroup filetypedetect
+  au! BufRead,BufNewFile *_spec.rb set filetype=rspec.ruby
+augroup END
+
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -93,6 +97,9 @@ if executable('ag')
 
   " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
 
 " configure syntastic syntax checking to check on open as well as save
@@ -206,13 +213,12 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 map <Leader>bb :!bundle install<CR>
-map <Leader>co :Tabularize /\|
+map <Leader>cu :Tabularize /\|
 map <Leader>gc :Gcommit<CR>
 map <Leader>gd :Gdiff<CR>
 map <Leader>gi :Git
 map <Leader>gs :Gstatus<CR>
 map <Leader>grm :Gremove
-
 map <Leader>i mmgg=G`m<CR>:w<CR>
 map <Leader>h noh<CR>
 map <Leader>m :Rmodel<CR>
@@ -241,6 +247,7 @@ map <Leader>vv "*p
 imap <C-j> (
 imap <C-k> )
 
+command! Q q " Bind :Q to :q
 command! Q q " Bind :Q to :q
 command! WQ wq
 command! Wq wq
