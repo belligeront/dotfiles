@@ -213,7 +213,7 @@ map <Leader>gi :Git
 map <Leader>gs :Gstatus<CR>
 map <Leader>grm :Gremove
 
-map <Leader>i mmgg=G`m<CR>
+map <Leader>i mmgg=G`m<CR>:w<CR>
 map <Leader>h noh<CR>
 map <Leader>m :Rmodel<CR>
 map <Leader>pn :sp ~/Dropbox/notes/programing_notes.txt<cr>
