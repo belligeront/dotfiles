@@ -28,7 +28,8 @@ alias rake="noglob bundled_rake"
 
 # Tests and Specs
 alias t="ruby -I test"
-alias cuc="bundle exec cucumber"
+alias cuke="cucumber"
+
 
 # Rubygems
 alias gi="gem install"
