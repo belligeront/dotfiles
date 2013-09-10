@@ -14,6 +14,7 @@ alias -g ONE="| awk '{ print \$1}'"
 alias c='cd'
 alias e="$EDITOR"
 alias v="$VISUAL"
+alias cal='cal | sed "s/.*/ & /;s/ $(date +%e) / ## /"'
 
 # git
 alias gci="git pull --rebase && rake && git push"
