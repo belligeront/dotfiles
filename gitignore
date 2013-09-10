@@ -16,3 +16,4 @@ database.yml
 .idea
 .secret
 .project
+.env
