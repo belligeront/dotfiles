@@ -111,7 +111,7 @@ let g:always_use_first_snippet=1 "use first
 
 
 " Numbers
-set number
+set relativenumber
 set numberwidth=5
 
 " Local config
@@ -185,7 +185,7 @@ set splitright
 " RUNNING TESTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>t :w\|:VroomRunTestFile<cr>
-map <leader>T :w\|:VroomRunNearestTest<cr>
+map <leader>s :w\|:VroomRunNearestTest<cr>
 map <Leader>rr :w\|:!rspec --color %<cr>
 imap <Leader>rr <ESC> :w\|:!rspec --color %<cr>
 let g:vroom_map_keys = 0
@@ -224,8 +224,6 @@ map <Leader>h noh<CR>
 map <Leader>m :Rmodel<CR>
 map <Leader>pn :sp ~/Dropbox/notes/programing_notes.txt<cr>
 map <Leader>ra :%s/
-map <Leader>sp yss<p>
-map <Leader>st :sp ~/Dropbox/notes/sharpen_tools.txt<cr>
 map <Leader>vi :tabe ~/Dropbox/dotfiles/vimrc<CR>
 map <Leader>vu :RVunittest<CR>
 map <Leader>vm :RVmodel<cr>
@@ -234,6 +232,9 @@ map <Leader>vc :RVcontroller<cr>
 map <Leader>vf :RVfunctional<cr>
 
 nnoremap <leader>w :w!<cr>
+
+" ctrl-s write
+nnoremap <c-s> :w<cr>
 
 " Yank selected text to clipboard
 vnoremap <C-c> "*y
@@ -253,5 +254,6 @@ command! WQ wq
 command! Wq wq
 command! W w
 command! Vsp vsp
+command! Vs vsp
 command! Sp sp
 command! Xa xa
