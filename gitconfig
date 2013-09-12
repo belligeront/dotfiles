@@ -26,6 +26,8 @@ autocrlf = input
 ff = only
 [include]
 path = .gitconfig.local
+[commit]
+  template = ~/.gitmessage
 [user]
 name = Ryan Vergeront
 email = ryanvergeront@gmail.com
