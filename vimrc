@@ -197,6 +197,11 @@ let g:vroom_map_keys = 0
 set background=dark
 colorscheme solarized
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OPEN FILES IN DIRECTORY OF CURRENT FILE
+" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ cnoremap %% <C-R>=expand('%:h').'/'<cr>
+ map <leader>e :edit %%
 
 """""""""""""""""""
 "Random Key Mappings
