@@ -62,6 +62,7 @@ alias aliases='vim ~/Dropbox/dotfiles/aliases'
 alias dot="cd ~/Dropbox/dotfiles"
 alias drop="cd ~/Dropbox"
 alias code="cd ~/code"
+alias reading="vim ~/Dropbox/reading.md"
 alias vimrc="vim ~/Dropbox/dotfiles/vimrc"
 alias notes="vim ~/Dropbox/notes/programing_notes.txt"
 alias tools="vim ~/Dropbox/notes/sharpen_tools.txt"
