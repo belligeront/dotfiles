@@ -112,6 +112,7 @@ let g:always_use_first_snippet=1 "use first
 
 " Numbers
 set relativenumber
+set nu
 set numberwidth=5
 
 " Local config
