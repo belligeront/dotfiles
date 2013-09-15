@@ -121,7 +121,7 @@ if filereadable($HOME . "/.vimrc.local")
 endif
 
 "Rename Current File
-function! RenmaeFile()
+function! RenameFile()
   let old_name = expand('%')
   let new_name = input('New file name: ', expand('%'), 'file')
   if new_name != '' && new_name != old_name
