@@ -20,6 +20,7 @@ alias cal='cal | sed "s/.*/ & /;s/ $(date +%e) / ## /"'
 alias gci="git pull --rebase && rake && git push"
 alias gad='git add -A'
 alias gd='git diff'
+alias gds='git diff --staged'
 alias gp='git push'
 alias gs='git status'
 
