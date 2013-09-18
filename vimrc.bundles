@@ -9,29 +9,22 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'croaky/vim-colors-github'
-Bundle 'danro/rename.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/syntastic'
-Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-Bundle 'tsaleh/vim-matchit'
 Bundle 'vim-scripts/ctags.vim'
 Bundle 'ervandew/supertab'
 Bundle 'skalnik/vim-vroom'
 Bundle 'tpope/vim-haml'
 Bundle 'tpope/vim-markdown'
 Bundle 'nelstrom/vim-visual-star-search'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
 Bundle "SirVer/ultisnips"
-Bundle "godlygeek/tabular"
-Bundle "honza/vim-snippets"
 Bundle 'christoomey/vim-tmux-navigator'
 
 filetype on
