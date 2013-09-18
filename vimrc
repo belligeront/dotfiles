@@ -5,7 +5,7 @@ set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
 set nowritebackup
 " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
-set noswapfile    
+set noswapfile
 set modelines=0
 set history=50
 set ruler         " show the cursor position all the time
@@ -263,8 +263,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+" Jump into ex mode with space
+nnoremap <space> :
 map <Leader>bb :!bundle install<CR>
-map <Leader>cu :Tabularize /\|
 map <Leader>gc :Gcommit<CR>
 map <Leader>gd :Gdiff<CR>
 map <Leader>gi :Git
@@ -282,6 +283,7 @@ map <Leader>vm :RVmodel<cr>
 map <Leader>vv :RVview<cr>
 map <Leader>vc :RVcontroller<cr>
 map <Leader>vf :RVfunctional<cr>
+nnoremap <C-e> 3<C-e> " make ^e scroll 3 lines
 
 nnoremap <leader>w :w!<cr>
 
