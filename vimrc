@@ -266,6 +266,7 @@ nnoremap <c-l> <c-w>l
 " Jump into ex mode with space
 nnoremap <space> :
 map <Leader>bb :!bundle install<CR>
+map <Leader>cu :!cucumber<CR>
 map <Leader>gc :Gcommit<CR>
 map <Leader>gd :Gdiff<CR>
 map <Leader>gi :Git
