@@ -5,6 +5,7 @@ ui = auto
 [alias]
 aa = add --all
 ap = add --patch
+au = add --update
 br = branch
 ca = commit --amend
 ci = commit -v
