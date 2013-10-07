@@ -27,5 +27,6 @@ Bundle 'nelstrom/vim-visual-star-search'
 Bundle "SirVer/ultisnips"
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'rking/ag'
+Bundle 'tpope/vim-repeat'
 
 filetype on
