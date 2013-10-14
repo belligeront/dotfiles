@@ -15,6 +15,7 @@ alias c='cd'
 alias e="$EDITOR"
 alias v="$VISUAL"
 alias cal='cal | sed "s/.*/ & /;s/ $(date +%e) / ## /"'
+alias sr='screen -r'
 
 # git
 alias gci="git pull --rebase && rake && git push"
@@ -39,6 +40,7 @@ alias giv="gem install -v"
 
 # Rails
 alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
+alias dcms="rake db:drop db:create db:migrate db:seed"
 alias m="migrate"
 alias rk="rake"
 alias s="rspec"
