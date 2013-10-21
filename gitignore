@@ -13,7 +13,7 @@ custom_plan.rb
 config.yml
 *.un~
 database.yml
-.idea
+*.idea
 .secret
 .project
 .env
