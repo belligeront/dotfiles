@@ -15,7 +15,7 @@ create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin &
 delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
 lg1 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
 lg2 = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''%C(white)%s%C(reset) %C(bold white)— %an%C(reset)' --abbrev-commit
-lg = !"git lg1"
+lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 merge-branch = !git checkout master && git merge @{-1}
 pr = !hub pull-request
 st = status
@@ -31,7 +31,7 @@ path = .gitconfig.local
 [commit]
   template = ~/.gitmessage
 [user]
-name = Ryan Vergeront
-email = ryanvergeront@gmail.com
+	name = Ryan Vergeront
+	email = ryan.vergeront@gmail.com
 [credential]
 helper = osxkeychain
