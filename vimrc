@@ -177,14 +177,14 @@ nnoremap <leader><leader> <c-^>
 
 " Close all other windows, open a vertical split, and open this file's test
 " " alternate in it.
-nnoremap <leader>s :call FocusOnFile()<cr>
-function! FocusOnFile()
-  tabnew %
-  normal! v
-  normal! l
-  call OpenTestAlternate()
-  normal! h
-endfunction
+" nnoremap <leader>s :call FocusOnFile()<cr>
+" function! FocusOnFile()
+"   tabnew %
+"   normal! v
+"   normal! l
+"   call OpenTestAlternate()
+"   normal! h
+" endfunction
 
 " Reload in chrome
 map <leader>l :w\|:silent !reload-chrome<cr>
@@ -219,6 +219,13 @@ function! AlternateForCurrentFile()
   return new_file
 endfunction
 nnoremap <leader>.  :call OpenTestAlternate()<cr>
+
+" Open rspec test in a vertical split
+function! SplitTestAlternative()
+  let new_file = AlternateForCurrentFile()
+  exec':vs ' . new_file
+endfunction
+nnoremap <leader>s  :call SplitTestAlternative()<cr>
 
 
 " Treat <li> and <p> tags like the block tags they are
