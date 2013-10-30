@@ -293,6 +293,7 @@ map <Leader>vv :RVview<cr>
 map <Leader>vc :RVcontroller<cr>
 map <Leader>vf :RVfunctional<cr>
 nnoremap <C-e> 3<C-e> " make ^e scroll 3 lines
+map <Leader>b Orequire 'pry'; binding.pry<esc>
 
 nnoremap <leader>w :w!<cr>
 
