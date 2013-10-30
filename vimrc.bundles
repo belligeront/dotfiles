@@ -27,5 +27,6 @@ Bundle "SirVer/ultisnips"
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'tpope/vim-repeat'
 Bundle 'mattn/emmet-vim'
+Bundle 'tpope/vim-commentary'
 
 filetype on
