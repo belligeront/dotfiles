@@ -280,8 +280,9 @@ map <Leader>gd :Gdiff<CR>
 map <Leader>gi :Git
 map <Leader>gs :Gstatus<CR>
 map <Leader>grm :Gremove
-map <Leader>i mmgg=G`m<CR>:w<CR>
 map <Leader>h noh<CR>
+map <Leader>i mmgg=G`m<CR>:w<CR>
+nnoremap <leader>k :silent !open -a Marked.app '%:p'<cr>
 map <Leader>m :Rmodel<CR>
 map <Leader>pn :sp ~/Dropbox/notes/programing_notes.txt<cr>
 map <Leader>ra :%s/
