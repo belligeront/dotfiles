@@ -288,11 +288,11 @@ map <Leader>pn :sp ~/Dropbox/notes/programing_notes.txt<cr>
 map <Leader>ra :%s/
 map <Leader>rw :%s/\<<C-r><C-w>\>/
 map <Leader>vi :tabe ~/Dropbox/dotfiles/vimrc<CR>
-map <Leader>vu :RVunittest<CR>
-map <Leader>vm :RVmodel<cr>
-map <Leader>vv :RVview<cr>
-map <Leader>vc :RVcontroller<cr>
-map <Leader>vf :RVfunctional<cr>
+map <Leader>vu :Runittest<CR>
+map <Leader>vm :Rmodel<cr>
+map <Leader>vv :Rview<cr>
+map <Leader>vc :Rcontroller<cr>
+map <Leader>vf :Rfunctional<cr>
 nnoremap <C-e> 3<C-e> " make ^e scroll 3 lines
 map <Leader>b Orequire 'pry'; binding.pry<esc>
 
@@ -307,7 +307,7 @@ vnoremap <C-c> "*y
 map <Leader>ca ggVG"*y
 
 "Paste clipcoard
-map <Leader>vv "*p
+  map <Leader>vp "*p
 
 
 imap <C-j> (
