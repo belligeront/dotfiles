@@ -142,6 +142,7 @@ function! PromoteToLet()
   :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
   :normal ==
 endfunction
+
 :command! PromoteToLet :call PromoteToLet()
 :map <leader>l :PromoteToLet<cr>
 
@@ -185,9 +186,6 @@ nnoremap <leader><leader> <c-^>
 "   call OpenTestAlternate()
 "   normal! h
 " endfunction
-
-" Reload in chrome
-map <leader>l :w\|:silent !reload-chrome<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
