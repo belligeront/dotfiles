@@ -31,7 +31,7 @@ path = .gitconfig.local
 [commit]
   template = ~/.gitmessage
 [user]
-	name = Ryan Vergeront
-	email = ryan.vergeront@gmail.com
+	name = verg
+	email = ryanvergeront@gmail.com
 [credential]
 helper = osxkeychain
