@@ -29,5 +29,6 @@ Bundle 'tpope/vim-repeat'
 Bundle 'mattn/emmet-vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'nono/vim-handlebars'
 
 filetype on
