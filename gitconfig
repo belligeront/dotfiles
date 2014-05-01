@@ -24,8 +24,6 @@ up = !git fetch origin && git rebase origin/master
 editor = vim
 excludesfile = ~/.gitignore
 autocrlf = input
-[merge]
-ff = only
 [include]
 path = .gitconfig.local
 [commit]
