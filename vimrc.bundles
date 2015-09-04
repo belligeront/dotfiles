@@ -31,5 +31,10 @@ Bundle 'tpope/vim-commentary'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'nono/vim-handlebars'
 Bundle 'koron/nyancat-vim'
+Bundle "wookiehangover/jshint"
+Bundle "tpope/vim-fireplace"
+Bundle "guns/vim-clojure-static"
+Bundle "tpope/vim-leiningen"
+Bundle "kien/rainbow_parentheses"
 
 filetype on
