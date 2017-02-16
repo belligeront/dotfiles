@@ -109,6 +109,16 @@ let g:syntastic_check_on_open=1
 let g:UltiSnipsSnippetsDir=["bundle/vim-snippets/snippets"]
 let g:always_use_first_snippet=1 "use first
 
+" golang
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goimports"
+
+
 
 " Numbers
 set relativenumber
@@ -164,8 +174,8 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " Remove trailing whitespace on save for ruby files.
 au BufWritePre *.rb :%s/\s\+$//e
 
-" Display extra whitespace
-set list listchars=tab:»·,trail:·
+" Display extra whitespace tab
+"set list listchars=tab:»·,trail:·
 
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
@@ -236,10 +246,10 @@ set splitright
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RUNNING TESTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>t :w\|:VroomRunTestFile<cr>
+au FileType ruby map <leader>t :w\|:VroomRunTestFile<cr>
+au FileType go nmap <leader>t <Plug>(go-test)
+
 map <leader>y :w\|:VroomRunNearestTest<cr>
-map <Leader>rr :w\|:!rspec --color %<cr>
-imap <Leader>rr <ESC> :w\|:!rspec --color %<cr>
 let g:vroom_map_keys = 0
 
 
@@ -279,11 +289,16 @@ nnoremap <c-l> <c-w>l
 
 " Jump into ex mode with space
 nnoremap <space> :
-map <Leader>bb :!bundle install<CR>
+au FileType ruby map <Leader>b :!bundle install<CR>
+au FileType go nmap <leader>b <Plug>(go-build)
+
 map <Leader>cu :!cucumber<CR>
 map <Leader>gc :Gcommit<CR>
 map <Leader>gd :Gdiff<CR>
 map <Leader>gi :Git
+map <Leader>gg :w\|GoRun<CR>
+map <Leader>gt :w\|GoTest<CR>
+map <Leader>gb :w\|GoBuild<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>grm :Gremove
 map <Leader>h noh<CR>
@@ -299,8 +314,8 @@ map <Leader>vm :Rmodel<cr>
 map <Leader>vv :Rview<cr>
 map <Leader>vc :Rcontroller<cr>
 map <Leader>vf :Rfunctional<cr>
+
 nnoremap <C-e> 3<C-e> " make ^e scroll 3 lines
-map <Leader>b Orequire 'pry'; binding.pry<esc>
 
 nnoremap <leader>w :w!<cr>
 
@@ -328,3 +343,34 @@ command! Vsp vsp
 command! Vs vsp
 command! Sp sp
 command! Xa xa
+
+call plug#begin()
+
+Plug 'croaky/vim-colors-github'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-surround'
+Plug 'vim-scripts/ctags.vim'
+Plug 'ervandew/supertab'
+Plug 'skalnik/vim-vroom'
+Plug 'tpope/vim-markdown'
+Plug 'nelstrom/vim-visual-star-search'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'tpope/vim-repeat'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-commentary'
+Plug 'vim-ruby/vim-ruby'
+Plug 'nono/vim-handlebars'
+Plug 'koron/nyancat-vim'
+Plug 'tpope/vim-fireplace'
+Plug 'guns/vim-clojure-static'
+Plug 'tpope/vim-leiningen'
+Plug 'fatih/vim-go'
+Plug 'SirVer/ultisnips'
+call plug#end()
+

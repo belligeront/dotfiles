@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/ryan/Dropbox/dotfiles/dotfiles/vim/bundle/vim-bundler'
+let g:netrw_dirhist_2='/Users/ryan/Dropbox/dotfiles/vim/snippets'
+let g:netrw_dirhist_3='/Users/ryan/go/src/gotorrent'
+let g:netrw_dirhist_4='/Users/ryan/go/src/gtorrent'
+let g:netrw_dirhist_5='/Users/ryan/exercism/go/hello-world'
+let g:netrw_dirhist_6='/Users/ryan/code/MIT-6.824-2016/src/raft'

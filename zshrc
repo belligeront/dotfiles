@@ -104,6 +104,9 @@ bindkey '\C-x\C-e' edit-command-line
 # Highlight search results in ack.
 export ACK_COLOR_MATCH='red'
 
+# export gopath
+export GOPATH=$HOME/go
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -144,5 +147,9 @@ alias glg='nocorrect git lg'
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ryan/.rbenv/shims:/Users/ryan/.bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/ryan/.rbenv/shims:/Users/ryan/.bin:$GOPATH/bin
 eval "$(rbenv init -)"
+
+# Racket for UCB SICP https://docs.google.com/document/d/11EL0fBeqZzLk3Ij8WDQK48eLMRfsT0ywksiJCPMyT58/edit
+export PATH=$PATH:/Applications/Racket\ v6.2.1/bin
+
